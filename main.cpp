@@ -145,7 +145,7 @@ void ttt::PvE() {
 			bool kkk = false;
 			while(!kkk) {
 				lel = getch();
-				if(lel == '\n' || lel == ' ' || lel == KEY_F(2))
+				if(lel == '\n' || lel == ' ' || lel == KEY_F(6))
 					kkk = true;
 			}
 			for(int i=0; i<c.n; i++)
@@ -168,7 +168,7 @@ void ttt::PvE() {
 			bool kkk = false;
 			while(!kkk) {
 				lel = getch();
-				if(lel == '\n' || lel == ' ' || lel == KEY_F(2))
+				if(lel == '\n' || lel == ' ' || lel == KEY_F(6))
 					kkk = true;
 			}
 			for(int i=0; i<c.n; i++)
@@ -254,7 +254,7 @@ void ttt::PvE() {
 			if(select <= 8)
 				select -= 3;
 		}
-		if(ch == KEY_F(2)) {
+		if(ch == KEY_F(6)) {
 			ex = true;
 			for(int i=0; i<c.n; i++)
 					f[i].zero();
@@ -315,7 +315,7 @@ void ttt::PvP() {
 			if(select <= 8)
 				select -= 3;
 		}
-		if(ch == KEY_F(2)) {
+		if(ch == KEY_F(6)) {
 			ex = true;
 			for(int i=0; i<c.n; i++)
 					f[i].zero();
@@ -409,7 +409,7 @@ void ttt::PvP() {
 			bool kkk = false;
 			while(!kkk) {
 				lel = getch();
-				if(lel == '\n' || lel == ' ' || lel == KEY_F(2))
+				if(lel == '\n' || lel == ' ' || lel == KEY_F(6))
 					kkk = true;
 			}
 			for(int i=0; i<c.n; i++)
@@ -428,7 +428,7 @@ void draw(int o = 6) { //Функция для вырисовывания экр
 int MainMenu() { //Метод для реализации меню
 	ccolor(0, 0); //Установка черного цвета
 	f[0].cube(c.x, 3); //Создание формы фигуры
-	f[0].add_text("MAIN MENU ||   F2 - TO EXIT", 0, 1, f[0].xmax - 13, 0); //Добавления текста для фигуры 
+	f[0].add_text("MAIN MENU ||   F6 - TO EXIT", 0, 1, f[0].xmax - 13, 0); //Добавления текста для фигуры
 	ccolor(0, 3); //Установка желтого цвета
 	f[1].cube(10, 1); //Создание формы фигуры
 	f[1].moving(3, 6); //Перемещение фигуры
@@ -453,7 +453,7 @@ int MainMenu() { //Метод для реализации меню
 			f[i].trecolor(3, 0); //Устанавливаем желтый текст
 		f[bools].trecolor(0, 3); //Устанавливаем черный текст на желтом фоне
 		draw(0); //Вырисовывание экрана с черным фоном
-		if(ch == KEY_F(2)) { //Считывание клавиши "F2" для выхода
+		if(ch == KEY_F(6)) { //Считывание клавиши "F2" для выхода
 			return 0; //Выход из программы
 		}
 		if(ch == KEY_UP) //Считывание клавиши "стрелочка вверх"
