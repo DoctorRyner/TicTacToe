@@ -475,6 +475,8 @@ int MainMenu() { //Метод для реализации меню
 }                                                                                                                                            
 
 int main() {
+	printf("Hi");
+	getch();
 	srand(time(0)); //Случайные числа
 	Graphics g; //Создание объекта класса Graphics
 	noecho(); //Убрать вывод с клавиатуры на экран
